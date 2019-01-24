@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
               new Text('Welcome home'),
               new RaisedButton(
                 onPressed: () {
-                  Navigator.of(context).pushNamed('/second');
+                  Navigator.of(context).pushNamedAndRemoveUntil('/second', (Route<dynamic> route) => false);
                 },
                 child: new Text('Next'),
               )
