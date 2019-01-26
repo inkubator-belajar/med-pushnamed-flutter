@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'mywidget.dart';
 
 class Second extends StatefulWidget {
   @override
@@ -28,7 +28,8 @@ class _SecondState extends State<Second> {
                   Navigator.of(context).pushNamed('/home');
                 }, 
                 child: new Text('Back'),
-              )
+              ),
+              new MyWidget()
             ],
           ),
         ),

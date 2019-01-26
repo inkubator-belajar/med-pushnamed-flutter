@@ -21,7 +21,8 @@ class _ThirdState extends State<Third> {
               new Text("Third page"),
               new RaisedButton(
                 onPressed: () {
-                  Navigator.of(context).pushNamed('/second');
+                  //Navigator.of(context).pushNamed('/second');
+                  Navigator.of(context).pop();
                 }, 
                 child: new Text('Back'),
               )
