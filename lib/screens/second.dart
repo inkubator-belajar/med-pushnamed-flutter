@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'mywidget.dart';
+import '../code/globalstate.dart';
 
 class Second extends StatefulWidget {
   @override
@@ -7,6 +8,9 @@ class Second extends StatefulWidget {
 }
 
 class _SecondState extends State<Second> {
+
+  GlobalState _store = GlobalState.instance;
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -18,7 +22,7 @@ class _SecondState extends State<Second> {
         child: new Center(
           child: new Column(
             children: <Widget>[
-              new Text('Welcome second home'),
+              new Text("Welcome second home ${_store.get('name')}"),
               new RaisedButton(
                 onPressed: () {
                   Navigator.of(context).pushNamed('/third');
